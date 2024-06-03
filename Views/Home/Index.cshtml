@@ -1,0 +1,94 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<div class="banner">
+    <div class="text-center">
+        <h1 class="display-4">Welcome!</h1>
+    </div>
+
+    <div class="search-container">
+        <form method="get" action="/search" class="form-inline">
+            <div class="form-group mx-sm-3 mb-2">
+                <input type="text" class="form-control rounded-button" id="searchQuery" name="q" placeholder="Search...">
+            </div>
+            <div class="form-group mx-sm-3 mb-2">
+                <a asp-area="" asp-controller="Home" asp-action="Index">
+                    <img src="~/filter.png" alt="filter" width="20" height="20" class="d-inline-block align-text-top" asp-append-version="true">
+                </a>                
+                <select class="form-control rounded-button" id="filter" name="filter">
+                    <option value="all">All</option>
+                    <option value="Medcine">Medcine</option>
+                    <option value="HealthCare">HealthCare</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary mb-2 rounded-button">Search</button>
+        </form>
+    </div>
+</div>
+
+<div class="product-container">
+    <div class="product-box">
+        <a asp-area="" asp-controller="Order" asp-action="Index">
+            <img src="~/check-up.png" alt="Healthcare" class="product-image">
+        </a>
+        <label for="Medicine" class=" product-label">Medicine</label>
+    </div>
+
+    <div class="product-box">
+        <a href="">
+            <img src="~/skincare.png" alt="Healthcare" class="product-image">
+        </a>
+        <label for="HealthCare" class=" product-label">HealthCare</label>
+    </div>
+</div>
+
+<style>
+    .search-container {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .form-inline {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .form-group {
+        margin-bottom: 0;
+    }
+
+    .form-control,
+    .btn {
+        width: auto;
+        display: inline-block;
+        border-radius: 20px;
+    }
+
+    .btn-primary {
+        background-color: #000000;
+    }
+
+    .product-container {
+        display: flex;
+        justify-content: center; /* Align the product boxes to the center */
+        margin-top: 80px; /* Add margin to separate from the search container */
+    }
+
+    .product-box {
+        flex: 0 0 30%; /* Make the boxes a little smaller */
+        margin: 25px; 
+        text-align: center;
+    }
+
+    .product-image {
+        max-width: 100%; 
+    }
+
+    .product-label {
+        display: block;
+        margin-top: 10px;
+        text-align: center;
+        font-size: larger;
+    }
+</style>
