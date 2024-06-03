@@ -59,3 +59,20 @@ Run the following commands to create the database:
 ## 7. Frontend Development
 
 To serve the purpose of initial understanding, a simple frontend has been created, including a navbar, footer, and home index screen.
+
+![Home Page](README.imgs/homeIndex.png)
+
+### Some snippts of view pages handelling Database
+
+![Product Index](README.imgs/usersList.png)
+![Product Index](README.imgs/productIndex.png)
+![Delete](README.imgs/deleteusr.png)
+![create](README.imgs/createOrder.png)
+![Edit](README.imgs/Edit.png)
+
+### TODO
+
+1. Authentication and Authorization
+2. Better UI/UX.
+3. Real orders and users Management.
+4. Testing and Deployment.
